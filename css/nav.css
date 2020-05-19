@@ -1,6 +1,6 @@
 html {
     background-color: chocolate;
-    font-family: 'Pangolin', cursive;
+
     height: 100vh;
 }
 
@@ -31,3 +31,7 @@ a:hover {
     text-align: center;
 }
 
+.site-title{
+    border: 4px dotted black;
+    margin: 20px;
+}
