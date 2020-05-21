@@ -1,7 +1,29 @@
-html {
-    background-color: chocolate;
+/*Reset do CSS*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+/**/
+body {
+    background-color: chocolate;
     height: 100vh;
+    font-size: 17px;
+}
+
+/* Se a tela tiver pelo menos 400px, vai carregar estes estilos*/
+@media (min-widht: 400px) {
+    body {
+        font-size: 17px;
+    }
+}
+
+header{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 a {
@@ -11,10 +33,19 @@ a {
 
 a:hover {
     text-decoration: underline;
+    background-color: #0073ff;
 }
 
 .menu{
     background-color: #4499ff;
+    position: fixed;
+    width: 100vw;
+    top: 0;
+}
+
+.menu a{
+    display: block;
+    padding: 10px 20px;
 }
 
 .menu li{
@@ -34,4 +65,10 @@ a:hover {
 .site-title{
     border: 4px dotted black;
     margin: 20px;
+    font-size: 3em;
+}
+
+.img-portifolio{
+    height: 200px;
+    width: 300px;
 }
