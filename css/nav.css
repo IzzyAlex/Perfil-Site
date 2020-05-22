@@ -5,25 +5,33 @@
     box-sizing: border-box;
 }
 
-/**/
+/*Válido para todo o site*/
 body {
     background-color: chocolate;
     height: 100vh;
-    font-size: 17px;
+    font-size: 12px;
 }
 
-/* Se a tela tiver pelo menos 400px, vai carregar estes estilos*/
-@media (min-widht: 400px) {
+/* Se a tela tiver pelo menos 400px, vai carregar estes estilos */
+@media (min-width: 400px) {
     body {
-        font-size: 17px;
+        font-size: 16px;
     }
 }
 
+/* Se a tela tiver pelo menos 600px, vai carregar estes estilos */
+@media (min-width: 600px) {
+    body {
+        font-size: 18px;
+    }
+}
+
+/*Modifica só o header*/
 header{
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height: 100vh;  /*Deixa a altura do header da aultura da tela que estiver*/
+    display: flex;  
+    justify-content: center;  /*Alinha horizotalmente*/
+    align-items: center;  /*Alinha verticalmente*/
 }
 
 a {
@@ -41,6 +49,7 @@ a:hover {
     position: fixed;
     width: 100vw;
     top: 0;
+    font-size: 1.35em;
 }
 
 .menu a{
@@ -57,18 +66,56 @@ a:hover {
     justify-content: space-around;
 }
 
-.site-subtitle,
-.site-title{
+.site-subtitle{
     text-align: center;
+    line-height: 1.8em;
+    font-size: 1.8em;
 }
 
 .site-title{
     border: 4px dotted black;
     margin: 20px;
     font-size: 3em;
+    text-align: center;
 }
 
-.img-portifolio{
-    height: 200px;
-    width: 300px;
+.desenho {
+    font-family: 'Pangolin', cursive;
+    padding: 2em;
+    height: 100vh;
+}
+
+.desenho h2 {
+    font-size: 1.9em;
+    margin-bottom: 1.8em;
+    color: #ffffff;
+}
+
+.desenho .grid {
+    display: grid;
+    grid-template-columns: 280px;
+    gap: 1.8em;
+    justify-content: center;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+/* Se a tela tiver pelo menos 625px, vai carregar esses estilos*/
+@media (min-width: 625px) {
+    .desenho .grid {
+        grid-template-columns: 280px 280px;
+    }
+}
+
+/* Se a tela tiver pelo menos 950px, vai carregar esses estilos*/
+@media (min-width: 950px) {
+    .desenho .grid {
+        grid-template-columns: 280px 280px 280px;
+    }
+}
+
+.img-desenho{
+    height: 180px;
+    width: 280px;
+    /*object-fit: ;*/ /*Mudar tamanho das imagens*/
 }
