@@ -41,7 +41,7 @@ a {
 
 a:hover {
     text-decoration: underline;
-    background-color: #0073ff;
+    background-color: #0055bd;
 }
 
 .menu{
@@ -50,11 +50,13 @@ a:hover {
     width: 100vw;
     top: 0;
     font-size: 1.35em;
+    z-index: 1;
 }
 
 .menu a{
     display: block;
     padding: 10px 20px;
+    transition: background-color 3s;
 }
 
 .menu li{
@@ -79,12 +81,27 @@ a:hover {
     text-align: center;
 }
 
-.desenho {
-    font-family: 'Pangolin', cursive;
-    padding: 2em;
-    height: 100vh;
+.titulos {
+    transform: scale(0.2) translateY(50vh);
+    opacity: 0;
+    animation: linear 2s animacaoTitulo forwards;
 }
 
+@keyframes animacaoTitulo {
+    100% {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+    }
+}
+
+.desenho,
+.canais {
+    font-family: 'Pangolin', cursive;
+    padding: 2em;
+    min-height: 100vh;
+}
+
+.canais h2,
 .desenho h2 {
     font-size: 1.9em;
     margin-bottom: 1.8em;
@@ -117,5 +134,29 @@ a:hover {
 .img-desenho{
     height: 180px;
     width: 280px;
+    border-radius: 10%;
+    transform: scale(1);
+    transition: transform 1s;
     /*object-fit: ;*/ /*Mudar tamanho das imagens*/
+}
+
+.img-desenho:hover {
+    transform: scale(1.2);
+}
+
+.canais .grid {
+    display: grid;
+    gap: 1.8em;
+    grid-template-columns: 400px;
+}
+
+.canais a{
+    color: black;
+    font-size: 3em;
+    transition: 1s;
+}
+
+.canais a:hover {
+    background-color: chocolate;
+    text-shadow: 0px 0px 10px black;
 }
