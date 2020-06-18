@@ -94,6 +94,7 @@ a:hover {
     }
 }
 
+.sobre,
 .desenho,
 .canais {
     font-family: 'Pangolin', cursive;
@@ -101,11 +102,39 @@ a:hover {
     min-height: 100vh;
 }
 
+@media (min-width: 1200px) {
+    .sobre,
+    .desenho,
+    .canais {
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
+
+.sobre h2,
 .canais h2,
 .desenho h2 {
     font-size: 1.9em;
     margin-bottom: 1.8em;
     color: #ffffff;
+}
+
+.sobre .avatar {
+    float: left;
+    margin: 2em;
+}
+
+.sobre .avatar img{
+    border-radius: 50%;
+}
+
+.sobre p {
+    color: whitesmoke;
+    text-indent: 1.5em;
+    margin-bottom: 1em;
+    text-align: justify;
 }
 
 .desenho .grid {
